@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TradeMic KOL & Community Launch Brief</title>
+  <meta name="description" content="FieldMic / TradeMic influencer and community launch brief for HVAC, Plumbing, Roofing, Restoration, and related trade verticals." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #111821;
+      --panel-2: #162131;
+      --text: #edf2f7;
+      --muted: #a7b4c2;
+      --line: #253244;
+      --accent: #70d6ff;
+      --accent-2: #a7f3d0;
+      --warn: #fbbf24;
+      --danger: #fb7185;
+      --shadow: 0 24px 80px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(112, 214, 255, .16), transparent 35%),
+        radial-gradient(circle at 85% 12%, rgba(167, 243, 208, .12), transparent 38%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.62;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: 56px 0 28px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px;
+      color: var(--muted); background: rgba(255,255,255,.035); font-size: 13px;
+    }
+    h1 { font-size: clamp(36px, 7vw, 76px); line-height: .96; letter-spacing: -0.06em; margin: 18px 0 20px; }
+    .lead { font-size: clamp(18px, 2.2vw, 25px); color: var(--muted); max-width: 940px; margin: 0; }
+    .lead strong, .accent { color: var(--text); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; margin-top: 30px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card h2, .card h3 { margin-top: 0; }
+    .quick {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0 0;
+    }
+    .quick a {
+      border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px;
+      color: var(--text); background: rgba(255,255,255,.03); font-size: 14px;
+    }
+    section { padding: 28px 0; }
+    .section-title { display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:16px; }
+    h2 { font-size: clamp(26px, 3vw, 42px); line-height: 1.08; letter-spacing: -0.04em; margin: 0 0 10px; }
+    h3 { font-size: 20px; letter-spacing: -0.02em; margin: 0 0 10px; }
+    p { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    .grid { display: grid; gap: 16px; }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .priority-list { display: grid; gap: 14px; }
+    .target {
+      display: grid; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: start;
+      border: 1px solid var(--line); border-radius: 20px; padding: 18px;
+      background: rgba(255,255,255,.035);
+    }
+    .rank {
+      width: 48px; height: 48px; border-radius: 14px; display:flex; align-items:center; justify-content:center;
+      background: var(--panel-2); color: var(--accent-2); font-weight: 800; border: 1px solid var(--line);
+    }
+    .tagrow { display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 0; }
+    .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 8px; background: rgba(255,255,255,.03); }
+    .score { font-size: 12px; color: var(--bg); background: var(--accent-2); padding: 5px 9px; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+    .score.yellow { background: var(--warn); }
+    .score.blue { background: var(--accent); }
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: rgba(112, 214, 255, .08);
+      padding: 16px 18px;
+      border-radius: 16px;
+      color: var(--text);
+    }
+    .danger {
+      border-left-color: var(--danger);
+      background: rgba(251, 113, 133, .08);
+    }
+    .steps { counter-reset: step; display: grid; gap: 12px; }
+    .step { position: relative; padding: 18px 18px 18px 62px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.035); }
+    .step:before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 18px; top: 18px;
+      width: 30px; height: 30px; border-radius: 10px;
+      display: grid; place-items: center;
+      background: var(--panel-2); color: var(--accent-2); font-weight: 800;
+    }
+    .script {
+      white-space: pre-wrap;
+      background: #070a0f;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      color: #d6e4f0;
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 16px; border: 1px solid var(--line); }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--text); background: rgba(255,255,255,.06); font-size: 13px; }
+    td { color: var(--muted); font-size: 14px; }
+    tr:last-child td { border-bottom: 0; }
+    footer { padding: 36px 0 56px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 34px; }
+    @media (max-width: 850px) {
+      .hero-grid, .grid.two, .grid.three { grid-template-columns: 1fr; }
+      .quick { grid-template-columns: repeat(2, 1fr); }
+      .target { grid-template-columns: 48px 1fr; }
+      .score { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="badge">GMIC AI · FieldMic / TradeMic · KOL Launch Brief · Updated 2026-06-27</div>
+    <h1>Trade Influencer Outreach Brief</h1>
+    <p class="lead"><strong>核心目标：</strong>把 HA-MIC 系列从“AI 录音硬件”转成 trades 行业的 <strong>hands-free field documentation assistant</strong>。先让真实技师证明它能减少 paperwork，再做 paid sponsor。</p>
+    <div class="quick">
+      <a href="#positioning">定位</a>
+      <a href="#targets">优先名单</a>
+      <a href="#packages">合作包</a>
+      <a href="#scripts">联系话术</a>
+    </div>
+    <div class="hero-grid">
+      <div class="card">
+        <h2>一句话方向</h2>
+        <p class="callout">We help field technicians turn real service calls into clean job notes, reports, and follow-up actions — without typing.</p>
+        <p class="muted">中文理解：我们卖的不是麦克风。我们卖的是“现场事实进入软件系统的入口”。SaaS 管流程，我们管事实。流程没有事实，只是空表格。</p>
+      </div>
+      <div class="card">
+        <h2>优先行业</h2>
+        <p>1. HVAC / HVACR</p>
+        <p>2. Plumbing</p>
+        <p>3. Electrical</p>
+        <p>4. Roofing / Restoration</p>
+        <p>5. Facility / Property Maintenance</p>
+        <p>6. Commercial Equipment Repair</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="positioning">
+      <div class="section-title"><div><h2>定位边界</h2><p class="muted">不要把产品说成“录音器”。录音会触发隐私、防备、玩具感。</p></div></div>
+      <div class="grid two">
+        <div class="card">
+          <h3>必须说</h3>
+          <p>Field documentation assistant</p>
+          <p>Hands-free job notes</p>
+          <p>AI service-call memory</p>
+          <p>Technician paperwork reduction</p>
+          <p>Quote explanation capture</p>
+          <p>Proof-of-work for field technicians</p>
+        </div>
+        <div class="card">
+          <h3>避免说</h3>
+          <p>AI microphone</p>
+          <p>Voice recorder</p>
+          <p>Wearable gadget</p>
+          <p>Cool hardware</p>
+          <p>Always-on recording device</p>
+          <p>Surveillance / monitoring tool</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="targets">
+      <div class="section-title"><div><h2>第一批优先联系名单</h2><p class="muted">优先找真实 trade creator，不先找泛流量蓝领大号。</p></div></div>
+      <div class="priority-list">
+        <div class="target"><div class="rank">1</div><div><h3>Chris Stephens / HVACR Videos</h3><p class="muted">HVACR、commercial refrigeration、真实 service call。最适合测试噪音、维修、现场口述、自动 job note。</p><div class="tagrow"><span class="tag">HVACR</span><span class="tag">Field service</span><span class="tag">Tool review</span><span class="tag">真实技师受众</span></div></div><div class="score">最高优先</div></div>
+        <div class="target"><div class="rank">2</div><div><h3>Adrian Garcia / Reliable HVACR</h3><p class="muted">Commercial kitchen service、refrigeration、equipment repair。适合 RepairMic / Commercial Equipment Repair。</p><div class="tagrow"><span class="tag">HVACR</span><span class="tag">Commercial kitchen</span><span class="tag">RepairMic</span></div></div><div class="score">高转化</div></div>
+        <div class="target"><div class="rank">3</div><div><h3>Gary McCreadie / HVAC Know It All</h3><p class="muted">HVAC podcast、工具评测、真实 technician feedback。适合 podcast + 工具评测。</p><div class="tagrow"><span class="tag">Podcast</span><span class="tag">HVAC education</span><span class="tag">Tool review</span></div></div><div class="score">高信任</div></div>
+        <div class="target"><div class="rank">4</div><div><h3>Roger Wakefield</h3><p class="muted">Plumbing / trades education。适合从 HVAC 扩到 PlumbingMic。</p><div class="tagrow"><span class="tag">Plumbing</span><span class="tag">Trades education</span><span class="tag">Sponsor path</span></div></div><div class="score blue">跨行业</div></div>
+        <div class="target"><div class="rank">5</div><div><h3>Roofing Insights / Dmitry Lipinskiy</h3><p class="muted">Roofing contractor education、tools review、insurance / claim documentation。适合 ClaimMic。</p><div class="tagrow"><span class="tag">Roofing</span><span class="tag">ClaimMic</span><span class="tag">Insurance-ready report</span></div></div><div class="score blue">Claim 方向</div></div>
+        <div class="target"><div class="rank">6</div><div><h3>Mechanical Hub</h3><p class="muted">行业媒体，不是单人网红。适合 product spotlight、guest article、podcast、newsletter。</p><div class="tagrow"><span class="tag">Mechanical</span><span class="tag">Plumbing</span><span class="tag">Heating</span><span class="tag">Media</span></div></div><div class="score yellow">媒体背书</div></div>
+        <div class="target"><div class="rank">7</div><div><h3>AC Service Tech / Craig Migliaccio</h3><p class="muted">技术教育强，适合做严肃评测：HVAC 参数、排障步骤、现场记录准确性。</p><div class="tagrow"><span class="tag">HVAC education</span><span class="tag">Technical review</span></div></div><div class="score yellow">技术背书</div></div>
+        <div class="target"><div class="rank">8</div><div><h3>HVAC School / Bryan Orr</h3><p class="muted">权威高，但谨慎。不要第一波硬冲；先拿 field test case，再用教育话题切入。</p><div class="tagrow"><span class="tag">HVAC education</span><span class="tag">Authority</span><span class="tag">After case studies</span></div></div><div class="score yellow">后置</div></div>
+        <div class="target"><div class="rank">9</div><div><h3>Ty Branaman / love2HVAC</h3><p class="muted">适合 apprentice training 场景：老技师现场讲解，AI 自动生成训练笔记。</p><div class="tagrow"><span class="tag">Training</span><span class="tag">Apprentice</span><span class="tag">Knowledge capture</span></div></div><div class="score yellow">培训方向</div></div>
+        <div class="target"><div class="rank">10</div><div><h3>Restoration Domination</h3><p class="muted">适合 restoration / water damage / mold / fire 场景，主讲 claim documentation 和现场证据链。</p><div class="tagrow"><span class="tag">Restoration</span><span class="tag">Insurance</span><span class="tag">Claim documentation</span></div></div><div class="score blue">纵深垂直</div></div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="section-title"><div><h2>合作包设计</h2><p class="muted">第一目标不是播放量，是拿到真实 field test 和行业信任。</p></div></div>
+      <div class="grid two">
+        <div class="card"><h3>A. Field Test Pack</h3><p>给 2–3 台样机；7–14 天真实现场测试；允许负面反馈。看噪音、佩戴、自动 note、失败点。</p><p class="muted">适合：HVACR Videos、Reliable HVACR、AC Service Tech。</p></div>
+        <div class="card"><h3>B. Technician Paperwork Challenge</h3><p>主题：Can this mic save 30 minutes of paperwork per day? 对比“回车上补记录”与“现场口述自动出 job note”。</p><p class="muted">适合：工具评测、YouTube 短视频、podcast。</p></div>
+        <div class="card"><h3>C. Owner / Service Manager Angle</h3><p>主题：Every tech becomes easier to manage. Every job has a record. Every quote has a reason.</p><p class="muted">目标：contractor owner、service manager、dispatcher。</p></div>
+        <div class="card"><h3>D. Claim Documentation Angle</h3><p>主题：Turn every inspection into an insurance-ready field report. 重点是 voice notes、damage description、customer statement、photo labels。</p><p class="muted">适合：Roofing Insights、Restoration creators。</p></div>
+      </div>
+    </section>
+
+    <section id="scripts">
+      <div class="section-title"><div><h2>第一轮联系话术</h2><p class="muted">不要说“带货”。说“真实 field test”。</p></div></div>
+      <div class="grid two">
+        <div class="card">
+          <h3>Short DM</h3>
+          <div class="script">Hi [Name], I’m building a hands-free AI field mic for HVAC / trade technicians.
+
+Not a recorder. The goal is to turn real service calls into job notes, parts lists, customer summaries, and invoice notes automatically.
+
+I’d like to send you 2–3 units for a real field test, not a fake promo. If it works, we can sponsor a follow-up video. If it fails, we want the honest feedback.
+
+Open to testing it on real jobs?</div>
+        </div>
+        <div class="card">
+          <h3>Email</h3>
+          <div class="script">Subject: Field test idea for HVAC / trade documentation
+
+Hi [Name],
+
+I’m Trigg, founder of GMIC AI. We build wearable AI audio hardware for field technicians.
+
+We are not looking for a normal product promotion. We are looking for a real technician / trade creator to test whether a hands-free field mic can turn actual service calls into clean job notes, parts lists, customer summaries, and follow-up actions.
+
+The problem is simple: technicians hate paperwork. Most field-service software manages dispatch, invoices, and CRM, but the real job information still lives in the technician’s head, in the truck, or in messy notes.
+
+We’d like to send you 2–3 test units and let you try them on real jobs for 7–14 days.
+
+If it works, we’d be open to sponsoring a follow-up video, podcast, or field review. If it doesn’t, we still want the honest feedback.
+
+Would you be open to a quick call or field test?
+
+Best,
+Trigg
+GMIC AI Inc.
+Anaheim, CA</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan">
+      <div class="section-title"><div><h2>14 天执行计划</h2><p class="muted">市场同事按这个节奏推进，不要陷入无限研究。</p></div></div>
+      <div class="steps">
+        <div class="step"><h3>Day 1–2：建 KOL 表格</h3><p>字段：Name、Brand、Industry、Platform、Website、Contact email、Sponsor page、Audience type、Why fit、Outreach status、Reply status、Notes。</p></div>
+        <div class="step"><h3>Day 3–4：准备 4 个素材</h3><p>One-page product brief、30 秒 demo video、Field test proposal、Outreach email / DM。重点讲工作流价值，不堆硬件参数。</p></div>
+        <div class="step"><h3>Day 5–7：第一轮联系 10 人</h3><p>每人至少两个渠道：official email / contact form、Instagram DM、LinkedIn、YouTube business email、website sponsor page。</p></div>
+        <div class="step"><h3>Day 8–10：社区观察与种子用户</h3><p>在 r/HVAC、r/Plumbing、r/electricians、r/Roofing、Facebook groups、YouTube comments 找 20 个真实 technician / small contractor owner。</p></div>
+        <div class="step"><h3>Day 11–14：筛回复并安排测试</h3><p>A 类：愿意 field test；B 类：愿意 paid sponsor；C 类：只愿意收钱发广告；D 类：无回复。优先推进 A / B，暂不做 C。</p></div>
+      </div>
+    </section>
+
+    <section id="scorecard">
+      <div class="section-title"><div><h2>合作判断标准</h2><p class="muted">不要只看粉丝数。</p></div></div>
+      <table>
+        <thead><tr><th>优先指标</th><th>判断</th></tr></thead>
+        <tbody>
+          <tr><td>评论区是否有真实 technician</td><td>有技术讨论、工具讨论、报价/维修流程讨论，优先。</td></tr>
+          <tr><td>是否做过工具评测 / sponsor</td><td>做过但不滥接广告，优先。</td></tr>
+          <tr><td>是否愿意真实测试</td><td>愿意 field test 的价值高于只报价发广告。</td></tr>
+          <tr><td>是否能触达老板</td><td>contractor owner / service manager 才是买单人。</td></tr>
+          <tr><td>是否能产生 demo call</td><td>第一阶段 KPI 是 demo call，不是播放量。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="grid two">
+        <div class="card">
+          <h2>社区提问模板</h2>
+          <div class="script">What is the most annoying paperwork you still have to do after a service call?
+
+Do you write job notes immediately, or later in the truck?
+
+Would hands-free voice notes help, or would it be annoying?
+
+What would make a wearable field mic useful enough to use daily?</div>
+        </div>
+        <div class="card danger">
+          <h2>禁止动作</h2>
+          <p>不要一上来发广告。</p>
+          <p>不要找纯娱乐蓝领大号作为第一波。</p>
+          <p>不要说“AI microphone / recorder”。</p>
+          <p>不要只买播放量。</p>
+          <p>不要在没有实测案例前硬冲最高权威。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p><strong>Internal execution note:</strong> 第一阶段目标是拿 3 个真实 field test，不是做 10 个普通广告。行业信任来自现场失败与真实反馈，不来自漂亮开箱。</p>
+  </footer>
+</body>
+</html>
